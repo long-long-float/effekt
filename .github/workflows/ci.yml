@@ -31,7 +31,7 @@ jobs:
         node-version: '10.x'
 
     - name: Install Chez Scheme
-      run: apt install chezscheme
+      run: sudo apt-get install chezscheme
 
     - name: Install Kiama fork
       run: sbt publishLocal
