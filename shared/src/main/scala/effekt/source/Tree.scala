@@ -101,7 +101,7 @@ case class VarDef(id: Id, annot: Option[ValueType], binding: Stmt) extends Def {
 case class EffDef(id: Id, ops: List[Operation]) extends Def {
   type symbol = symbols.UserEffect
 }
-case class Operation(id: Id, tparams: List[Id], params: List[ValueParams], ret: Effectful, isEffectful: Boolean) extends Definition {
+case class Operation(id: Id, tparams: List[Id], params: List[ValueParams], ret: Effectful) extends Definition {
   type symbol = symbols.EffectOp
 }
 case class DataDef(id: Id, tparams: List[Id], ctors: List[Constructor]) extends Def {
